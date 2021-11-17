@@ -98,3 +98,49 @@ function compareImcString(imcUser1, nameUser1, imcUser2, nameUser2) {
 console.log(compareImcString(user1.imc, user1.name, user4.imc, user4.name));
 
 //exercice 3
+
+if (user1.imc < 22) {
+	console.log(
+		"Bonjour " +
+			user1.name +
+			". Avec un imc de " +
+			user1.imc +
+			", vous êtes en insuffisance pondérale.",
+	);
+}
+if (22 <= user1.imc && user1.imc <= 27) {
+	console.log(
+		"Bonjour " +
+			user1.name +
+			". Avec un imc de " +
+			user1.imc +
+			", vous avez un poids correct.",
+	);
+}
+if (28 <= user1.imc && user1.imc <= 32) {
+	console.log(
+		"Bonjour " +
+			user1.name +
+			". Avec un imc de " +
+			user1.imc +
+			", vous êtes en surpoids.",
+	);
+}
+if (33 <= user1.imc && user1.imc <= 42) {
+	console.log(
+		"Bonjour " +
+			user1.name +
+			". Avec un imc de " +
+			user1.imc +
+			", vous êtes en obésité.",
+	);
+}
+if (user1.imc > 43) {
+	console.log(
+		"Bonjour " +
+			user1.name +
+			". Avec un imc de " +
+			user1.imc +
+			", vous êtes en obésité sévère.",
+	);
+}
