@@ -78,5 +78,3 @@ if (33 <= user1.imc && user1.imc <= 42) {
 if (user1.imc > 43) {
 	console.log('"' + user1.name + ": obésité sévére" + '"');
 }
-
-//pour la correction
