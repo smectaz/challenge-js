@@ -1,6 +1,6 @@
 "use strict";
 
-//challenge 69
+//challenge 6
 
 let scoreDauphin1 = [44, 23, 71];
 let scoreKoalas1 = [65, 54, 49];
