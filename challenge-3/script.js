@@ -59,7 +59,7 @@ function compareImcString(imcUser1, nameUser1, imcUser2, nameUser2) {
 	}
 }
 
-console.log(compareImcString(user1.imc, user1.name, user2.imc, user2.name));
+compareImcString(user1.imc, user1.name, user2.imc, user2.name);
 
 //exercice 3
 

@@ -78,9 +78,9 @@ function comparatorAverage(average1, average2) {
 	}
 }
 
-console.log(comparatorAverage(moyenneScoreDauphin1, moyenneScoreKoalas1));
-console.log(comparatorAverage(moyenneScoreDauphin2, moyenneScoreKoalas2));
-console.log(comparatorAverage(moyenneScoreDauphin3, moyenneScoreKoalas3));
+comparatorAverage(moyenneScoreDauphin1, moyenneScoreKoalas1);
+comparatorAverage(moyenneScoreDauphin2, moyenneScoreKoalas2);
+comparatorAverage(moyenneScoreDauphin3, moyenneScoreKoalas3);
 
 //partie 3
 
@@ -105,6 +105,6 @@ function victory(finalScore1, finalScore2) {
 	}
 }
 
-console.log(victory(moyenneScoreDauphin1, moyenneScoreKoalas1));
-console.log(victory(moyenneScoreDauphin2, moyenneScoreKoalas2));
-console.log(victory(moyenneScoreDauphin3, moyenneScoreKoalas3));
+victory(moyenneScoreDauphin1, moyenneScoreKoalas1);
+victory(moyenneScoreDauphin2, moyenneScoreKoalas2);
+victory(moyenneScoreDauphin3, moyenneScoreKoalas3);

@@ -36,6 +36,6 @@ function billTtc(amount) {
 		  );
 }
 
-console.log(billTtc(bill1));
-console.log(billTtc(bill2));
-console.log(billTtc(bill3));
+billTtc(bill1);
+billTtc(bill2);
+billTtc(bill3);
