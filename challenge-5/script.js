@@ -15,24 +15,10 @@ function billTtc(amount) {
 	let total2 = amount + tips2;
 	amount >= 50 && amount <= 300
 		? console.log(
-				'"' +
-					"La note était de " +
-					amount +
-					", le pourboire de " +
-					tips1 +
-					" et la valeur totale était de " +
-					total1 +
-					'."',
+				`" La note était de ${amount}, le pourboire de ${tips1} et la valeur totale était de ${total1}. "`,
 		  )
 		: console.log(
-				'"' +
-					"La note était de " +
-					amount +
-					", le pourboire de " +
-					tips2 +
-					" et la valeur totale était de " +
-					total2 +
-					'."',
+				`" La note était de ${amount}, le pourboire de ${tips2} et la valeur totale était de ${total2}. "`,
 		  );
 }
 
