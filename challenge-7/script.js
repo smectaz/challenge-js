@@ -1,8 +1,6 @@
 "use strict";
 
-//challenge 5
-
-//partie 1
+//partie 1 reprise de l'ancien challenge 5
 
 const bill1 = 275;
 const bill2 = 40;
@@ -25,3 +23,32 @@ function billTtc(amount) {
 billTtc(bill1);
 billTtc(bill2);
 billTtc(bill3);
+
+//partie 2 utilisation de tableaux
+
+let bills = [125, 555, 44];
+let tips = [];
+function calcTip(bill) {
+	let tip1 = bill * 0.15;
+	let tip2 = bill * 0.2;
+	if (bill >= 50 && bill <= 300) {
+		return tips.push(tip1);
+	} else {
+		return tips.push(tip2);
+	}
+}
+
+for (let i = 0; i < bills.length; i++) {
+	calcTip(bills[i]);
+}
+
+console.log(tips);
+
+//partie 3
+
+let total = [];
+for (let i = 0; i < bills.length; i++) {
+	total.push(bills[i] + tips[i]);
+}
+
+console.log(total);

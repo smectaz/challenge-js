@@ -31,50 +31,28 @@ console.log(bernardHasHigherImc);
 
 function compareImcString(imcUser1, nameUser1, imcUser2, nameUser2) {
 	if (imcUser1 > imcUser2) {
-		console.log(
-			'" ' +
-				nameUser1 +
-				" a un IMC (" +
-				imcUser1 +
-				") plus élevé que " +
-				nameUser2 +
-				" (" +
-				imcUser2 +
-				")." +
-				' "',
-		);
+		return `" ${nameUser1} a un IMC (${imcUser1}) plus élevé que ${nameUser2} (${imcUser2})"`;
 	} else {
-		console.log(
-			'" ' +
-				nameUser2 +
-				" a un IMC (" +
-				imcUser2 +
-				") plus élevé que " +
-				nameUser1 +
-				" (" +
-				imcUser1 +
-				")." +
-				' "',
-		);
+		return `" ${nameUser2} a un IMC (${imcUser2}) plus élevé que ${nameUser1} (${imcUser1})"`;
 	}
 }
 
 console.log(compareImcString(user1.imc, user1.name, user2.imc, user2.name));
 
 //exercice 3
+function imcResult(imcUser, name) {
+	if (imcUser < 22) {
+		return `" ${name}: insuffisance pondérale "`;
+	} else if (imcUser < 27) {
+		return `" ${name}: poids correct "`;
+	} else if (imcUser <= 32) {
+		return `" ${name}: surpoids "`;
+	} else if (imcUser <= 42) {
+		return `" ${name}: obésité "`;
+	} else if (imcUser > 43) {
+		return `" ${name}: obésité sévère "`;
+	}
+}
 
-if (user1.imc < 22) {
-	console.log('"' + user1.name + ": insuffisance pondérale" + '"');
-}
-if (22 <= user1.imc && user1.imc <= 27) {
-	console.log('"' + user1.name + ": poids correct" + '"');
-}
-if (28 <= user1.imc && user1.imc <= 32) {
-	console.log('"' + user1.name + ": surpoids" + '"');
-}
-if (33 <= user1.imc && user1.imc <= 42) {
-	console.log('"' + user1.name + ": obésité" + '"');
-}
-if (user1.imc > 43) {
-	console.log('"' + user1.name + ": obésité sévére" + '"');
-}
+console.log(imcResult(user1.imc, user1.name));
+console.log(imcResult(user2.imc, user2.name));

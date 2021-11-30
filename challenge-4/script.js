@@ -3,6 +3,7 @@
 //challenge 4 donkeys
 
 //partie 1
+console.log("affichage des moyenne\n\n");
 
 const scoreDauphin1 = [96, 108, 89];
 const scoreKoalas1 = [88, 91, 110];
@@ -39,7 +40,7 @@ console.log(
 console.log(
 	"La première moyenne des scores des koalas est de " +
 		moyenneScoreKoalas1 +
-		".",
+		".\n\n",
 );
 
 console.log(
@@ -51,7 +52,7 @@ console.log(
 console.log(
 	"La deuxième moyenne des scores des koalas est de " +
 		moyenneScoreKoalas2 +
-		".",
+		".\n\n",
 );
 
 console.log(
@@ -63,18 +64,18 @@ console.log(
 console.log(
 	"La troisième moyenne des scores des koalas est de " +
 		moyenneScoreKoalas3 +
-		".",
+		".\n\n",
 );
 
 //partie 2
-
+console.log("comparaison des moyenne\n\n");
 function comparatorAverage(average1, average2) {
 	if (average1 > average2) {
-		console.log("Les Dauphins l'emporte ");
+		return "Les Dauphins l'emporte \n";
 	} else if (average1 < average2) {
-		console.log("Les Koalas l'emporte ");
+		return "Les Koalas l'emporte ";
 	} else {
-		console.log("Egalité ");
+		return "Egalité ";
 	}
 }
 
@@ -83,11 +84,11 @@ console.log(comparatorAverage(moyenneScoreDauphin2, moyenneScoreKoalas2));
 console.log(comparatorAverage(moyenneScoreDauphin3, moyenneScoreKoalas3));
 
 //partie 3
-
+console.log("\nvictoire si plus de 100\n\n");
 function victory(finalScore1, finalScore2) {
 	if (finalScore1 > finalScore2) {
 		if (finalScore1 >= 100) {
-			console.log("Les Dauphins l'emporte");
+			return "Les Dauphins l'emporte";
 		} else {
 			return "Pas de gagnant";
 		}
@@ -95,7 +96,7 @@ function victory(finalScore1, finalScore2) {
 
 	if (finalScore1 < finalScore2) {
 		if (finalScore2 >= 100) {
-			console.log("Les Koalas l'emporte");
+			return "Les Koalas l'emporte";
 		} else {
 			return "Pas de gagnant";
 		}
