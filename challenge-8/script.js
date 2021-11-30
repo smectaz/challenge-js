@@ -1,139 +1,32 @@
 "use strict";
 
-// EX 01 -  Use a loop to remove the 'X' and use console.log to reveal the message
-const hiddenMessage = [
-	"X",
-	"X",
-	"X",
-	"X",
-	"W",
-	"X",
-	"E",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"L",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"L",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	" ",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"D",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"O",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"N",
-	"X",
-	"X",
-	"X",
-	"X",
-	"E",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	"X",
-	",",
-	"X",
-	" ",
-	"X",
-];
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+let tip;
 
-while (hiddenMessage.indexOf("X") !== -1) {
-	hiddenMessage.splice(hiddenMessage.indexOf("X"), 1);
+function calcTip(bill) {
+	bill >= 50 && bill <= 300
+		? (tip = (bill * 15) / 100)
+		: (tip = (bill * 20) / 100);
+	return tip;
 }
-console.log(hiddenMessage);
 
-// EX 02 - Remove the 'X' and the even numbers
+tips = bills.map(calcTip);
 
-const hiddenCode =
-	"XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXXXX XXXXXXXXXXXXXXX:X0XXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX3XXXXXX2XXXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX6XXXXXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX7XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXXXXXXXXX8XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX8XXXXXXXXXXX4XXXXXXXXXXXX6XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXXXXXXXXXXXXXXXX9XXXX9XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2XXX4XXXXXXXXXXX6XXXXXXXXX2XXXXXXXX3XXXXXXXX2XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX4XXXXX";
-// Your code goes here
+totals = bills.map((bill, index) => {
+	return bill + tips[index];
+});
 
-let arrayHiddenCode = hiddenCode.split("");
-console.log(arrayHiddenCode);
+console.log(bills);
+console.log(tips);
+console.log(totals);
 
-for (let i = 0; i < arrayHiddenCode.length; i++) {
-	arrayHiddenCode = arrayHiddenCode.filter((element) => {
-		return element != "X" && element % 2 != 0;
-	});
-	console.log(arrayHiddenCode.join(""));
-}
+let calcAverage = (array) => {
+	let sum = array.reduce((acc, curr) => acc + curr);
+	let average = sum / array.length;
+
+	return Math.round(average);
+};
+
+console.log(calcAverage(totals));
