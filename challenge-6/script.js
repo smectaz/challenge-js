@@ -23,3 +23,14 @@ let averageKoalas1 = calcAverage(scoreKoalas1);
 let averageKoalas2 = calcAverage(scoreKoalas2);
 
 console.log(averageDauphin1, averageDauphin2, averageKoalas1, averageKoalas2);
+
+function checkWinner(averageDauphin, averageKoala) {
+	if (averageDauphin > averageKoala) {
+		return `L'équipe Dauphin gagne (${averageDauphin} vs ${averageKoala})`;
+	} else {
+		return `L'équipe Koalas gagne (${averageKoala} vs ${averageDauphin})`;
+	}
+}
+
+console.log(checkWinner(averageDauphin1, averageKoalas1));
+console.log(checkWinner(averageDauphin2, averageKoalas2));
