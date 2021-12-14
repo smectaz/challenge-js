@@ -2,6 +2,7 @@
 
 //challenge 6
 
+//partie 1
 let scoreDauphin1 = [44, 23, 71];
 let scoreKoalas1 = [65, 54, 49];
 let scoreDauphin2 = [85, 54, 41];
